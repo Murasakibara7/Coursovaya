@@ -1,17 +1,11 @@
-# ЯНДЕКС ПОЛИГОН ----  y0_AgAAAABhMxEEAADLWwAAAADcmzWG_XgBzmXBRaSd_ei34nygBZAZY9o
-# ВК АПИ ------  id=
-# access_token=vk1.a.HfXzgdhp_Sewd5HDyvV__Si74vkTKzME2Nk0fmkBqrA6DiH4_a9ERsgYke9dLWtDYIb2O-gA1VhenIjd1jtqfHPylhb0xx--Og4t2dgIzL5kCXNmDwfsjSCggcGGsbWs7bq8v2Sf4mxOxYa9WIouBBCEsZU747NaCFUr0ctYUS2t-ODhUUSA2xly7vLfdztr_wq0g7UjzzylTIRybY05cg&expires_in=0&
-# user_id=646055837
-
 import requests
 import os
 import json
 import time
-from pprint import pprint
 from progress.bar import Bar
 
-id = ''
-token_vk = ''
+id = input('')
+token_vk = input('')
 
 
 class DownloadsPhoto:
@@ -60,8 +54,7 @@ class DownloadsPhoto:
             with open(f'{self.direct}/log.json', 'a') as file:
                 json.dump(logs_list, file, indent=2)
 
-
-token_yandex = ''
+token_yandex = input('')
 
 
 class UploadPhoto:
@@ -119,3 +112,5 @@ class UploadPhoto:
 if __name__ == '__main__':
     user1 = UploadPhoto(token_yandex)
     user1.uploading_files_to_yandex_disk(user1.creating_a_new_folder_on_yandex_disk('Фотки с Vk'))
+    user1 = DownloadsPhoto(id, token_vk)
+    user1.downloads_photo_from_vk()
