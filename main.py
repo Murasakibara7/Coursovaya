@@ -61,10 +61,6 @@ class DownloadsPhoto:
                 json.dump(logs_list, file, indent=2)
 
 
-if __name__ == '__main__':
-    user1 = DownloadsPhoto(id, token_vk)
-    user1.downloads_photo_from_vk()
-
 token_yandex = ''
 
 
